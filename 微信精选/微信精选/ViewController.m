@@ -54,6 +54,7 @@ static NSString *AppKey = @"d17276b3022746fe55fd60eb9b842e26";
     // Dispose of any resources that can be recreated.
 }
 -(void)loadData{
+    pno=1;
     NSString *urlString= [NSString stringWithFormat:@"http://v.juhe.cn/weixin/query?pno=%d&ps=%d&dtype=%@&key=%@",pno++,ps,dtype,AppKey];
     NSURL *url =[NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
